@@ -49,41 +49,58 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'put your unique phrase here'); 
-define('SECURE_AUTH_KEY',  'put your unique phrase here'); 
-define('LOGGED_IN_KEY',    'put your unique phrase here'); 
-define('NONCE_KEY',        'put your unique phrase here'); 
-define('AUTH_SALT',        'put your unique phrase here'); 
-define('SECURE_AUTH_SALT', 'put your unique phrase here'); 
-define('LOGGED_IN_SALT',   'put your unique phrase here'); 
-define('NONCE_SALT',       'put your unique phrase here'); 
+define('AUTH_KEY',         '7za7W2xb+z,3)1{DgYMZ?:<r%cHrk@+m_M/*y3,fTk3cj-h:pqB:4!LjR0 5iMRU');
+define('SECURE_AUTH_KEY',  '!%O$P +#p3$sI6Z5KSC.OQ5<|)[?TI/MLYXIO6;juMe-`YBYR!tT[&<`VK--FFcA');
+define('LOGGED_IN_KEY',    'OsCz+Y45G(!-1|86V>JlmF7{_I!0!.LG6lM07,_PpM<i8%]q&_T60QFLYEtyB!&6');
+define('NONCE_KEY',        '| *BD=][+g*=+qq9_nG(PsD4h%.Z$@u,.|lIa.5M*Bs)tj3?vMssSt<PX;t>a ^A');
+define('AUTH_SALT',        'g7qpdzJ.;_0=+fQ]Ik@RggAzP{s|zY,GGH&)t3mY8+#kiS4|-O*~ cl!z&T3f CK');
+define('SECURE_AUTH_SALT', 't;rRv*?sN!iQ++Fz}2E$h(+N;1rWc5N,:@_T9-T3+;x9!xqI:QQFB3~ v-V5*wD9');
+define('LOGGED_IN_SALT',   'h8x|K$^ |H3a9hOAYWb^N+pMH5F[!|;hZ_Z|-@/>-rM;F1nL=;4IJVfboub~/A%.');
+define('NONCE_SALT',       '{%>ZH&eWmga2-1ly64g :PL%!]B7L(H9pjrTqDOdlpf1s=|8yT! Px=YxMQZ/)[9');
 /**#@-*/
 
 /**
- * Préfixe de base de données pour les tables de WordPress.
+ * WordPress Database Table prefix.
  *
- * Vous pouvez installer plusieurs WordPress sur une seule base de données
- * si vous leur donnez chacune un préfixe unique. 
- * N'utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés!
+ * You can have multiple installations in one database if you give each a unique
+ * prefix. Only numbers, letters, and underscores please!
  */
 $table_prefix  = 'wp_';
 
-/** 
- * Pour les développeurs : le mode deboguage de WordPress.
- * 
- * En passant la valeur suivante à "true", vous activez l'affichage des
- * notifications d'erreurs pendant votre essais.
- * Il est fortemment recommandé que les développeurs d'extensions et
- * de thèmes se servent de WP_DEBUG dans leur environnement de 
- * développement.
- */ 
-define('WP_DEBUG', false); 
+/**
+ * WordPress Localized Language, defaults to English.
+ *
+ * Change this to localize WordPress. A corresponding MO file for the chosen
+ * language must be installed to wp-content/languages. For example, install
+ * de_DE.mo to wp-content/languages and set WPLANG to 'de_DE' to enable German
+ * language support.
+ */
+define('WPLANG', 'fr_FR');
 
-/* C'est tout, ne touchez pas à ce qui suit ! Bon blogging ! */
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ */
+define('WP_DEBUG', false);
 
-/** Chemin absolu vers le dossier de WordPress. */
+/* Multisite */
+define( 'WP_ALLOW_MULTISITE', true );
+
+define('MULTISITE', true);
+define('SUBDOMAIN_INSTALL', true);
+define('DOMAIN_CURRENT_SITE', 'slorany.local');
+define('PATH_CURRENT_SITE', '/');
+define('SITE_ID_CURRENT_SITE', 1);
+define('BLOG_ID_CURRENT_SITE', 1);
+
+/* That's all, stop editing! Happy blogging. */
+
+/** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
-/** Réglage des variables de WordPress et de ses fichiers inclus. */
+/** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
